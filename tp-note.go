@@ -14,7 +14,6 @@ func Ft_coin(coins []int, amount int) int {
 	}
 	dp[0] = 0
 
-	// Parcourir chaque valeur de 1
 	for i := 1; i <= amount; i++ {
 		// Essayer chaque pièce
 		for _, coin := range coins {
