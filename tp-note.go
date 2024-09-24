@@ -7,14 +7,14 @@ import (
 )
 
 func Ft_coin(coins []int, amount int) int {
-	// Tableau pour stocker le nombre minimum de pièces nécessaires pour chaque valeur
+
 	dp := make([]int, amount+1)
 	for i := range dp {
-		dp[i] = math.MaxInt32 // Initialiser avec une valeur infinie
+		dp[i] = math.MaxInt32
 	}
-	dp[0] = 0 // 0 pièce nécessaire pour atteindre la valeur 0
+	dp[0] = 0
 
-	// Parcourir chaque valeur de 1 à amount
+	// Parcourir chaque valeur de 1
 	for i := 1; i <= amount; i++ {
 		// Essayer chaque pièce
 		for _, coin := range coins {
